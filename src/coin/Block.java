@@ -8,6 +8,7 @@ public class Block {
     private String prevHash;
     private String merkleRoot;
 
+    
     private int index;
     private int difficulty;
     private int nonce;
