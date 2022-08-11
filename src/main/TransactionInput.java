@@ -1,3 +1,4 @@
+package com.example;
 public class TransactionInput {
 
     // Reference to TransacationOutput -> transactionId

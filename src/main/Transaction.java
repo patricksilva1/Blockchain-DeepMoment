@@ -1,7 +1,6 @@
 package com.example;
 
 import java.security.PublicKey;
-import java.util.List;
 
 public class Transaction {
 

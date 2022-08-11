@@ -1,6 +1,11 @@
 package com.example;
 
 import java.security.MessageDigest;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HexFormat;
+import java.util.List;
 
 public class Block {
     private String timeStamp;
@@ -8,7 +13,6 @@ public class Block {
     private String prevHash;
     private String merkleRoot;
 
-    
     private int index;
     private int difficulty;
     private int nonce;
@@ -131,11 +135,5 @@ public class Block {
     public void setNonce(Integer nonce) {
         this.nonce = nonce;
     }
-
-
-    
-
-
-
 
 }
