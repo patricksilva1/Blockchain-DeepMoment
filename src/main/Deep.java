@@ -26,4 +26,12 @@ public class Deep {
 
     private static final String version = "1";
 
+    public static void main(String[] args) throws IOException, InterruptedException {
+        final Gson gson = new GsonBuilder().create();
+        final Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
+        int port = 8015;
+        LOGGER.info("Starting Peer Network...");
+
+    }
+
 }
