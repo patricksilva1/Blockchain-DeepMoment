@@ -39,6 +39,12 @@ public class Transaction {
 
         // To Do: add gathers for transaction inputs;
 
+        for (TransactionInput i : inputs) {
+            i.UTXO = Deep.UTXOs.get(i.transactionOutputId);
+        }
+
+        // And here we need to check if transactions are valid;
+
     }
 
 }
