@@ -16,4 +16,10 @@ public class TransactionOutput {
         // To do: add the Id = CommonUtils
     }
 
+    // Check if coin belongs to u.
+
+    public boolean isMine(PublicKey publicKey) {
+        return (publicKey == reciepient);
+    }
+
 }
