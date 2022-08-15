@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Deep {
+public class DeepMoment {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Deep.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DeepMoment.class);
 
     private static List<Block> blockChain = new ArrayList<Block>();
 
@@ -30,7 +30,21 @@ public class Deep {
         final Gson gson = new GsonBuilder().create();
         final Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
         int port = 8015;
+
         LOGGER.info("Starting Peer Network...");
+        PeerNetwork PeerNetwork = new PeerNetwork(port);
+        PeerNetwork.start();
+        LOGGER.info("[ Node is Started in port: " + port + " ]");
+
+        // to do: Start rpc here;
+        LOGGER.info("Starting RPC daemon...");
+        RpcServer rpcAgent = new RpcServer(port + 1);
+        rpcAgent.start();
+        LOGGER.info("[ RPC agent is Started in port: " + (port + 1) + " ]");
+
+        // Peer list;
+        ArrayList<String> peers = new ArrayList<>();
+        File peerFile = new File("peers.list");
 
     }
 
