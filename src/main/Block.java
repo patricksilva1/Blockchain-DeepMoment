@@ -29,7 +29,7 @@ public class Block {
         return Hex.encodeHexString(hash);
     }
 
-    /*
+    /**
      * to Do: Increases nonce value until hash target is reached. (Check this later)
      * 
      * @param difficulty
@@ -78,7 +78,7 @@ public class Block {
         return true;
     }
 
-    // Getters and Setters
+    // #region Getters and Setters
 
     public String getTimeStamp() {
         return timeStamp;
@@ -136,4 +136,5 @@ public class Block {
         this.nonce = nonce;
     }
 
+    // #endregion
 }
